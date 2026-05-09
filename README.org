@@ -1,0 +1,5 @@
+An experimental virtual list library in ClojureScript for toying around with Pretext within Paradise's timeline.
+
+Has gone through many, many iterations to be even moderately usable.
+
+At some point would like to give this the proper care it deserves, but for now...
