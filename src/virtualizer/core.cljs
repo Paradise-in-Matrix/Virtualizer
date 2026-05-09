@@ -37,8 +37,7 @@
       :component-will-unmount
       (fn [this]
         (when-let [el @!scroll-ref]
-          (.removeEventListener el "wheel" wheel-handler)
-          (.removeEventListener el "touchmove" wheel-handler))
+          (.removeEventListener el "wheel" wheel-handler))
         (.disconnect container-obs)
         (.disconnect item-resize-obs)
         (when metrics-obs (.disconnect metrics-obs)))
@@ -131,13 +130,11 @@
                              (when (not= old-el el)
                                (when old-el
                                  (.disconnect container-obs)
-                                 (.removeEventListener old-el "wheel" wheel-handler)
-                                 (.removeEventListener old-el "touchmove" wheel-handler))
+                                 (.removeEventListener old-el "wheel" wheel-handler))
                                (reset! !scroll-ref el)
                                (when el
                                  (.observe container-obs el)
-                                 (.addEventListener el "wheel" wheel-handler #js {:passive false})
-                                 (.addEventListener el "touchmove" wheel-handler #js {:passive false})))))
+                                 (.addEventListener el "wheel" wheel-handler #js {:passive false})))))
                     :style {:overflow-anchor "none" :overflow-y "auto" :min-height "0"}
                     :on-scroll (fn [e]
                                  (scroll/evaluate-scroll-position!
