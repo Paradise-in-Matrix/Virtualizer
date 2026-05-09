@@ -90,4 +90,4 @@
                    (when on-load-older (on-load-older)))
                  (when (and focus-mode? (<= dist-from-bottom 600) (not loading-newer?))
                    (when on-load-newer (on-load-newer))))
-               150)))))
+               300)))))
