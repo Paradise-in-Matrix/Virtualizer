@@ -48,7 +48,7 @@
           idx              (layout/binary-search-start-index positioned (inc dist-after-shift))
           valid-anchors    (drop idx positioned)
           new-anchor       (or (first (remove #(let [id (str (:id %))]
-                                                 (or (clojure.string/starts-with? id "virtual-")
+                                                 (or (str/starts-with? id "virtual-")
                                                      (= id "read-marker")))
                                               valid-anchors))
                                (first valid-anchors))]
