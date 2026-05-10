@@ -42,7 +42,7 @@
             (when-not (<= (js/Math.abs sync-err) 1.5)
               (when-not (and (<= sync-dist 5) (not was-loading?) (not focus-mode?))
                 (set! (.-scrollTop el) (+ (.-scrollTop el) sync-err)))))
-          (log/warn "--> JS ANCHOR LOST: Target Anchor ID unmounted by virtualizer. Re-acquiring..."))))
+          (js/console.warn "--> JS ANCHOR LOST: Target Anchor ID unmounted by virtualizer. Re-acquiring..."))))
 
     (let [dist-after-shift (get-dist el)
           idx              (layout/binary-search-start-index positioned (inc dist-after-shift))
