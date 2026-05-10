@@ -1,6 +1,5 @@
 (ns virtualizer.scroll
-  (:require [taoensso.timbre :as log]
-            [reagent.core :as r]
+  (:require [reagent.core :as r]
             [clojure.string :as str]
             [virtualizer.layout :as layout]))
 
