@@ -89,4 +89,5 @@
                    (when on-load-older (on-load-older)))
                  (when (and focus-mode? (<= dist-from-bottom 600) (not loading-newer?))
                    (when on-load-newer (on-load-newer))))
+               ;; need to be more intelligent with the timer here
                300)))))
